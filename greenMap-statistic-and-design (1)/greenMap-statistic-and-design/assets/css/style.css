@@ -1,0 +1,466 @@
+@font-face {
+    font-family: UbuntuCondensed;
+    src: url(../fonts/UbuntuCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: microsoftsansserif;
+    src: url(../fonts/microsoftsansserif.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/static/Montserrat-Regular.ttf');
+}
+body {
+    width: 100%;
+    height: 100%;
+    --blue: #0061C7;
+    --grey: rgb(124, 124, 124);
+    --red: #e3000f;
+    font-family: Montserrat;
+}
+.accent-color{
+    background-color:var(--blue);
+}
+.img-fluid{
+    max-width: 100%;
+}
+.main {
+    width: 70%;
+    margin: auto;
+}
+/* main{
+    height:100vh;
+
+} */
+.containter{
+    width:1280px;
+    margin:auto;
+}
+.text h3{
+    margin-bottom:2rem;
+}
+.text li{
+    margin-bottom:1rem;
+    list-style-type: none;
+}
+.text__list-bullet{
+    width:25px;
+    padding-right:10px;
+}
+.text{
+    margin:2rem 20px;
+    font-size:1.1rem;   
+}
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+    background: #c0c0c0;
+}
+
+#header,
+#footer {
+    width: 100%;
+    height: 90px;
+    background-color: var(--blue);
+    font-family: Montserrat;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    padding:0px 20px;
+    
+}
+.header__content, .footer__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding: 0 30px;
+    margin: 0;
+}
+.header__content-item,.footer__content-item {
+    list-style-type: none;
+}
+.header__content__img{
+    width:29px;
+    cursor:pointer;
+}
+.filter-svg:hover{
+    fill:var(--red);
+    stroke:var(--red);
+}
+.header__title{
+    font-size:2rem;
+}
+.header__title a{
+    color:#fff;
+    text-decoration: none;
+}
+
+#footer {
+    margin-top: 50px;
+}
+
+
+.menu-main {
+    list-style: none;
+    margin: 40px 0 5px;
+    padding: 25px 0 5px;
+    text-align: center;
+    background: white;
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main li:after {
+    content: "|";
+    color: var(--grey);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 34px 0 34px;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.menu-main a,
+.menu-main a:visited {
+    color: var(--grey);
+}
+
+.menu-main a.current,
+.menu-main a:hover {
+    color: var(--red);
+}
+
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 2.5px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: var(--red);
+    transition: .8s;
+}
+
+.menu-main a:hover:before,
+.menu-main .current:before {
+    left: 0;
+}
+
+.menu-main a:hover:after,
+.menu-main .current:after {
+    right: 0;
+}
+
+@media (max-width: 550px) {
+    .menu-main {
+        padding-top: 0;
+    }
+    .menu-main li {
+        display: block;
+    }
+    .menu-main li:after {
+        content: none;
+    }
+    .menu-main a {
+        padding: 25px 0 25px;
+        margin: 0 30px;
+    }
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    padding-top: 15px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.textFrame {
+    position: absolute;
+    padding: 40px 50px 60px 50px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.textOne {
+    font-family: UbuntuCondensed;
+}
+
+.textTwo {
+    font-family: UbuntuCondensed;
+}
+
+.image img {
+    width: 100%;
+}
+
+#logoWithLines {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.greenLines {
+    width: 65vh;
+    height: 0.21vh;
+    background-color: #008001;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.greenLogo {
+    width: 8vw;
+    padding-top: 10px;
+    margin-top: 46px;
+    margin-bottom: 70px;
+    margin-left: 28px;
+}
+
+.blocks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex-grow:1;
+}
+
+.line_block {
+    width: 16vw;
+    float: left;
+    text-align: center;
+    border-radius: 30px;
+    margin-left: 1.3vw;
+    margin-bottom:1.3vw;
+}
+
+.line_block img {
+    width: inherit;
+}
+
+.p{
+    width: 100%;
+}
+.photo-background{
+    background-image: url('../images/sstu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+    width:100%;
+}
+.login-form{
+    width:598px;
+    height:452px;
+    margin:auto;
+    background-color: #fff;
+    padding:48px;
+}
+.login-form-subtitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom:48px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.form-element{
+    margin-bottom:12px;
+}
+
+input.form-element-input{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.44px;
+    color: rgba(0, 0, 0, 0.38);
+    width:70%;
+    padding:4px 16px;
+    height:56px;
+    border-color: rgba(0, 0, 0, 0.38);
+    border-width: 1px;
+    border-radius:2px;
+    outline:none;
+}
+select.form-element-input{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.44px;
+    color: rgba(0, 0, 0, 0.38);
+    width:25%;
+    padding:4px 16px;
+    height:40px;
+    border-color: rgba(0, 0, 0, 0.38);
+    border-width: 1px;
+    border-radius:2px;
+    outline:none;
+    margin-bottom:1rem;
+}
+.login-form form{
+    margin:36px 0px;
+}
+.login-form-footer{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+}
+a.link-accent{
+    color:var(--red);
+    text-decoration: underline;
+}
+a.link-accent:hover{
+    text-decoration:none;
+    color:#fff;
+    transition:all 0.2s ease;
+}
+a.admin-nav{
+    color:#fff;
+    font-size:1rem;
+    text-transform: uppercase;
+    text-decoration:none;
+}
+a.admin-nav:hover, a.active{
+    color:var(--red);
+    text-transform: uppercase;
+    text-decoration:underline;
+    transition: all 0.2s ease;
+}
+a.active{
+    color:#fff;
+}
+
+    /* Площадки-альтернатива */
+
+.points{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.points__container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.points__container-item{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    padding:27px 23px;
+    margin-right:43px;
+}
+.points__container-item span{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 59px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    border: 2px solid #DE4E3E;
+}
+.containter{
+    position: relative;
+}
+/* Таблица насаждений */
+th{
+    font-size:0.8rem;
+    text-align:left;
+}
+.table_img{
+    width:30px;
+}
+.popupTree{
+    position: absolute;
+    top:100px;
+    left:100px;
+}
+.img_edit {
+    width: 40px;
+}
+
+
+/* Модальное окно */
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -5px;
+}
+
+.window_img {
+    margin-left: 20px;
+    width: 132px;
+    height: 176px !important;
+    border: solid 1px black;
+}
+
+.modal-body_element .form-control {
+    margin-bottom: 16px;
+}
+
+.modal-body_element select.form-element-input {
+    width: 170px;
+    padding: 4px 5px;
+}
+
+.modal-body_element {
+    width: 170px;
+    margin: 0 5px;
+}
+
+.input-group input, .form-control {
+    width: 170px;
+    height: 40px;
+    padding: 4px 8px;
+}
+
+.forAddBtn {
+    width: 100%;
+    position: relative;
+    height: 38px;
+    margin-bottom: 10px;
+}
+
+.addBtn {
+    position: absolute;
+    right: 0;
+}
+
+.modalPhoto {
+    width: 600px;
+    margin: auto;
+}
+
