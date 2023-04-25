@@ -5,12 +5,12 @@ function yesNo(filter,trs,point,id){
             for(let tr of trs){
                 if(filter.val()=='Да'){
                     if(tr.children[id].innerHTML!='есть'){
-                        $(tr).css('display','none')
+                        $(tr).remove()
                     }
                 }
                 if(filter.val()=='Нет'){
                     if(tr.children[id].innerHTML!='нет'){
-                        $(tr).css('display','none')
+                        $(tr).remove()
                     }
                   }
             }
@@ -19,12 +19,10 @@ function yesNo(filter,trs,point,id){
 }
 function select(filter,trs,point,id){
     if(filter.val()!='Вид' && filter.val()!='Площадка' ){
-    
-        console.log(filter.val())
     if( filter.attr('id')==point){
         for(let tr of trs){
             if(!tr.children[id].innerHTML.includes(filter.val())){
-                    $(tr).css('display','none')
+                    $(tr).remove()
             }
         }
     }}
